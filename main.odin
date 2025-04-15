@@ -119,7 +119,7 @@ dijkstra :: proc(graph: Graph, src: uint) -> ([dynamic]uint, [dynamic]Maybe(uint
     }
     dist[src] = 0
 
-    fmt.println("dist=", dist)
+    //fmt.println("dist=", dist)
 
     for v in 0..<graph.total_vertices {
         pq.push(&pqueue, v)
@@ -152,8 +152,8 @@ dijkstra :: proc(graph: Graph, src: uint) -> ([dynamic]uint, [dynamic]Maybe(uint
 
 shortest_path :: proc(src: uint, dest: uint, graph: Graph) -> (path: [dynamic]uint) {
     dist, prev := dijkstra(graph, src)
-    fmt.println(dist)
-    fmt.println(prev)
+    //fmt.println(dist)
+    //fmt.println(prev)
 
     u: Maybe(uint) = dest
     if prev[dest] != nil {
@@ -197,7 +197,7 @@ main :: proc() {
     print_matrix(graph.mat)
 
     spath := shortest_path(0, 4, graph)
-    fmt.println(spath)
+    //fmt.println(spath)
 
     free_all()
 }

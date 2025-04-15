@@ -18,6 +18,8 @@ test_a :: proc(^testing.T) {
     set_edge(2, 1, 2, &graph)
     set_edge(3, 2, 4, &graph)
 
+    shortest_path(0, 5, graph)
+
     free_all()
 }
 
@@ -49,6 +51,8 @@ test_b :: proc(^testing.T) {
     set_edge(7, 4, 5, &graph)
     set_edge(6, 5, 6, &graph)
 
+    shortest_path(0, 6, graph)
+
     free_all()
 }
 
@@ -76,6 +80,8 @@ test_c :: proc(^testing.T) {
     set_edge(1, 6, 5, &graph)
     set_edge(3, 6, 3, &graph)
     set_edge(1, 3, 4, &graph)
+
+    shortest_path(0, 7, graph)
 
     free_all()
 }
